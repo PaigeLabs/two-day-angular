@@ -17,12 +17,22 @@ function isItPrime(num){
   return deferred.promise;
 }
 
-
-isItPrime(15).then(
-  function(result){
-    console.log(result + ' is prime');
-  },
-  function(err){
-    console.log(err);
-  }
-);
+//calling...
+isItPrime(15)
+  .then(
+    function success(result){
+      console.log(result + ' is prime');
+    },
+    function error(err){
+      console.log(err);
+    }
+  )
+  .then(function(){
+    throw new Error('something happened');
+  })
+  .fail(function(err){
+    console.log('something happened in the success, error or other stuff in this chain.', err.message);
+  })
+  .finally(function(){
+    console.log('always do this');
+  });
