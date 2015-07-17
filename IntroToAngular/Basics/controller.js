@@ -1,4 +1,4 @@
 angular.module('testApp')
-  .controller('testCtrl', function($scope){
+  .controller('TestCtrl', function($scope){
     $scope.message = 'Hello Angular!';
   });
