@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="testApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Dependency Injection in AngularJS</title>
+    <link rel="stylesheet" href="main.css" charset="utf-8">
+  </head>
+  <body ng-controller="TestCtrl" ng-cloak>
+
+    <span>{{weather.main.temp}}</span>
+
+    <!-- angular stuff -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.min.js"></script>
+
+    <!-- my stuff -->
+    <script src="app/weather.module.js"></script>
+    <script src="app/weather.controller.js"></script>
+    <script src="app/weather.service.js"></script>
+  </body>
+</html>

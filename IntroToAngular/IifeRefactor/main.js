@@ -25,5 +25,5 @@
   angular.module('testApp', [])
     .controller('TestCtrl', testController)
     .factory('WeatherSvc', weatherService);
-    
+
 }())
